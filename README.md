@@ -1,5 +1,5 @@
-# generator swagger test
-[![dependencies Status][daviddm-image]][daviddm-url] [![devDependencies Status][daviddm-dev-image]][daviddm-dev-url] [![Build Status][travis-image]][travis-url] [![AppVeyor][appveyor-image]][appveyor-url]
+# generator-swagger-test
+[![dependencies Status][daviddm-image]][daviddm-url][![devDependencies Status][daviddm-dev-image]][daviddm-dev-url] [![Build Status][travis-image]][travis-url] [![AppVeyor][appveyor-image]][appveyor-url]
 
 
 ## Development setup
