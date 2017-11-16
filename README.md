@@ -21,7 +21,7 @@ $ docker-compose up
 [daviddm-image]: http://img.shields.io/david/Eskalol/generator-swagger-test.svg?style=flat-square
 [daviddm-url]: https://david-dm.org/Eskalol/generator-swagger-test
 [daviddm-dev-url]: https://david-dm.org/Eskalol/generator-swagger-test?type=dev
-[daviddm-dev-image]: https://david-dm.org/dev/Eskalol/generator-swagger-test.svg?style=flat-square
+[daviddm-dev-image]: https://img.shields.io/dev/Eskalol/generator-swagger-test.svg?style=flat-square
 
 [appveyor-image]: https://img.shields.io/appveyor/ci/Eskalol/generator-swagger-test.svg?style=flat-square
 [appveyor-url]: https://ci.appveyor.com/project/Eskalol/generator-swagger-test
