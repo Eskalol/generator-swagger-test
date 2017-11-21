@@ -57,7 +57,7 @@
     "lint": "eslint src/api/ src/config/ src/models/ src/app.js src/index.js src/auth",
     "lint:fix": "eslint --fix src/api/ src/config/ src/models/ src/app.js src/index.js src/auth",
     "test": "NODE_ENV=test nyc mocha src/test/**/*.js --compilers js:babel-core/register -R spec --timeout 5000",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov"
   },
   "repository": {
     "type": "git",
