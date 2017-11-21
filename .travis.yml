@@ -6,6 +6,7 @@ node_js:
 
 after_script:
   - bash <(curl -s https://codecov.io/bash)
+
 matrix:
   fast_finish: true
   allow_failures:

@@ -46,6 +46,12 @@
       "transform-runtime"
     ]
   },
+  "nyc": {
+    "exclude": [
+      "src/test/**/*.js",
+      "src/config/**/*.js"
+    ]
+  },
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "dev": "babel-watch src",
@@ -56,8 +62,7 @@
     "babel-version": "babel --version",
     "lint": "eslint src/api/ src/config/ src/models/ src/app.js src/index.js src/auth",
     "lint:fix": "eslint --fix src/api/ src/config/ src/models/ src/app.js src/index.js src/auth",
-    "test": "NODE_ENV=test nyc mocha src/test/**/*.js --compilers js:babel-core/register -R spec --timeout 5000",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov"
+    "test": "NODE_ENV=test ./node_modules/.bin/nyc ./node_modules/.bin/mocha src/test/**/*.js --compilers js:babel-core/register -R spec --timeout 5000",
   },
   "repository": {
     "type": "git",
