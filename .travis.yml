@@ -5,7 +5,7 @@ node_js:
   - 6
 
 after_script:
-  - bash <(curl -s https://codecov.io/bash)
+  - npm run coverage
 
 matrix:
   fast_finish: true
