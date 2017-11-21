@@ -1,11 +1,11 @@
 # generator-swagger-test
-[![dependencies Status][daviddm-image]][daviddm-url][![devDependencies Status][daviddm-dev-image]][daviddm-dev-url] [![Build Status][travis-image]][travis-url] [![AppVeyor][appveyor-image]][appveyor-url]
+[![dependencies Status][daviddm-image]][daviddm-url] [![devDependencies Status][daviddm-dev-image]][daviddm-dev-url] [![codecov][codecov-image]][codecov-url] [![Build Status][travis-image]][travis-url] [![AppVeyor][appveyor-image]][appveyor-url]
 
 
 ## Development setup
 ```bash
 $ npm install -g swagger
-$ git clone git@github.com:Eskalol/generator-swagger-test.git
+$ git clone https://github.com/Eskalol/generator-swagger-test.git
 $ mongod
 $ npm run dev
 $ npm run swagger
@@ -29,4 +29,6 @@ $ docker-compose up
 
 [travis-image]: https://img.shields.io/travis/Eskalol/generator-swagger-test.svg?style=flat-square
 [travis-url]: https://travis-ci.org/Eskalol/generator-swagger-test
+[codecov-url]: https://codecov.io/gh/Eskalol/generator-swagger-test
+[codecov-image]: https://img.shields.io/codecov/c/github/Eskalol/generator-swagger-test.svg?style=flat-square
 

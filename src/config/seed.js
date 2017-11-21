@@ -28,6 +28,7 @@ export default function seedDB() {
           description: 'Warchief (of the Horde), The Dark Lady, The Banshee Queen, Mistress Sylvanas',
         });
       });
+
     User.find({}).remove()
       .then(() => {
         User.create({
@@ -44,5 +45,6 @@ export default function seedDB() {
           provider: 'local',
         });
       });
+
   }
 }

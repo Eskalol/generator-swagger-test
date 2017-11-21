@@ -2,7 +2,7 @@
   "name": "generator-swagger-test",
   "version": "0.0.0",
   "private": true,
-  "description": "Test project for generator-swagger-es-6",
+  "description": "test repository for generator-swagger-es-6",
   "keywords": [],
   "author": "Eskil Opdahl Nordland",
   "license": "",
@@ -27,16 +27,16 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-watch": "^2.0.6",
+    "should": "^7.1.0",
+    "supertest": "^3.0.0",
+    "mocha": "^3.4.2",
     "chai": "^3.2.0",
-    "chai-as-promised": "^6.0.0",
+    "nyc": "^11.3.0",
     "codecov": "^3.0.0",
+    "chai-as-promised": "^6.0.0",
     "eslint": "^4.6.1",
     "eslint-config-airbnb-base": "^11.3.2",
-    "eslint-plugin-import": "^2.7.0",
-    "mocha": "^3.4.2",
-    "nyc": "^11.3.0",
-    "should": "^7.1.0",
-    "supertest": "^3.0.0"
+    "eslint-plugin-import": "^2.7.0"
   },
   "babel": {
     "presets": [
@@ -68,6 +68,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:Eskalol/generator-swagger-test.git"
+    "url": "git+https://github.com/Eskalol/generator-swagger-test.git"
   }
 }
