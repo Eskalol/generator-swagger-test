@@ -30,9 +30,6 @@
     "codecov": "^3.0.0",
     "cross-spawn": "^5.1.0",
     "del": "^3.0.0",
-    "eslint": "^4.6.1",
-    "eslint-config-airbnb-base": "^11.3.2",
-    "eslint-plugin-import": "^2.7.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-env": "^0.4.0",
@@ -46,7 +43,10 @@
     "run-sequence": "^2.2.0",
     "should": "^7.1.0",
     "supertest": "^3.0.0",
-    "swagger-editor-live": "^2.1.8"
+    "swagger-editor-live": "^2.1.8",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0"
   },
   "babel": {
     "presets": [

@@ -12,7 +12,6 @@ import istanbul from 'gulp-istanbul';
 import { Instrumenter as isparta } from 'isparta';
 import spawn from 'cross-spawn';
 
-
 const paths = {
   src: 'src',
   scripts: 'src/**/*.js',
