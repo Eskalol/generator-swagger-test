@@ -46,7 +46,8 @@
     "nyc": "^11.3.0",
     "run-sequence": "^2.2.0",
     "should": "^7.1.0",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "swagger-editor-live": "^2.1.8"
   },
   "babel": {
     "presets": [

@@ -47,6 +47,17 @@ gulp.task('serve', cb => {
 });
 
 /**
+ * Swagger
+ */
+gulp.task('swagger', () => {
+  return spawn('./node_modules/.bin/swagger-editor-live',
+    ['src/api/swagger/swagger.yaml',
+    '--port=35568'],
+    {stdio: 'inherit'}
+  );
+});
+
+/**
 * Start servers
 */
 gulp.task('start:dev', () => {
