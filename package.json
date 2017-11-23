@@ -47,7 +47,7 @@
     "run-sequence": "^2.2.0",
     "should": "^7.1.0",
     "supertest": "^3.0.0",
-    "swagger-editor-live": "^2.1.8"
+    "swagger-editor-live": "^2.s1.8"
   },
   "babel": {
     "presets": [
@@ -66,11 +66,7 @@
   },
   "scripts": {
     "start": "npm run build && node dist/index.js",
-    "serve": "gulp serve",
-    "swagger": "gulp swagger",
     "build": "gulp build",
-    "lint": "gulp lint",
-    "lint:fix": "gulp lint:fix",
     "test": "gulp test",
     "coverage": "gulp coverage"
   },
