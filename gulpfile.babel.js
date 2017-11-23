@@ -7,6 +7,7 @@ import eslint from 'gulp-eslint';
 import babel from 'gulp-babel';
 import env from 'gulp-env';
 import util from 'gulp-util';
+import spawn from 'cross-spawn';
 
 
 const paths = {
@@ -21,12 +22,11 @@ const paths = {
 };
 
 function onServerLog(log) {
-    console.log(util.colors.white('[') +
-        util.colors.yellow('nodemon') +
-        util.colors.white('] ') +
-        log.message);
+  console.log(util.colors.white('[') +
+      util.colors.yellow('nodemon') +
+      util.colors.white('] ') +
+      log.message);
 }
-
 
 /**
  * Serve
@@ -102,6 +102,52 @@ gulp.task('lint:fix', () => {
     .pipe(gulp.dest('./src'));
 });
 
+/**
+ * Testing
+ */
+gulp.task('test', cb => {
+  runSequence(
+    'env:test',
+    'mocha',
+    cb);
+});
+
+gulp.task('mocha', () => {
+  return spawn('./node_modules/.bin/nyc',
+    ['./node_modules/.bin/mocha',
+    'src/test/**/*.js',
+    '--compilers',
+    'js:babel-core/register',
+    '-R',
+    'spec',
+    '--timeout',
+    '5000'],
+    {stdio: 'inherit'}
+  );
+});
+
+/**
+ * Test coverage and report
+ */
+
+gulp.task('coverage', cb => {
+  runSequence(
+    'coverage:report',
+    'coverage:codecov',
+    cb);
+});
+
+gulp.task('coverage:report', () => {
+  return spawn('./node_modules/.bin/nyc',
+    ['report',
+    '--reporter=text-lcov',
+    '>',
+    'coverage.lcov']);
+});
+
+gulp.task('coverage:codecov', () => {
+  return spawn('./node_modules/.bin/codecov');
+});
 /**
  * Build
  */
