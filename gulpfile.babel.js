@@ -2,7 +2,7 @@ import _ from 'lodash';
 import gulp from 'gulp';
 import nodemon from 'nodemon';
 import eslint from 'gulp-eslint';
-
+import babel from 'gulp-babel';
 
 const paths = {
   scripts: [
@@ -42,3 +42,17 @@ gulp.task('lint:fix', () => {
     .pipe(eslint.format())
     .pipe(gulp.dest('./src'));
 });
+
+gulp.task('transpile', () => {
+  return gulp.src(_.union(['src/**/*.js'], [`!${paths.test}`]))
+    .pipe(babel({
+      presets: {
+        'es2015',
+        'stage-0'
+      },
+      plugins: [
+        'transform-runtime'
+      ]
+    }))
+    .pipe(gulp.dest('dist'));
+})
