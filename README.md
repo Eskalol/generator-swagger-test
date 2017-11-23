@@ -4,12 +4,22 @@
 
 ## Development setup
 ```bash
-$ npm install -g swagger
+$ npm install -g gulp
 $ git clone https://github.com/Eskalol/generator-swagger-test.git
 $ mongod
-$ npm run dev
-$ npm run swagger
+$ gulp
 ```
+
+## Gulp Tasks:
+- Run `gulp` to serve:dev and run swagger editor.
+- Run `gulp test` to run unit tests with mocha.
+- Run `gulp build` to build dist.
+- Run `gulp serve:dist` to serve production.
+- Run `gulp serve` to serve development.
+- Run `gulp clean:dist` to clean dist folder.
+- Run `gulp swagger` to run swagger editor.
+- Run `gulp lint` to run linting.
+- Run `gulp lint:fix` to fix fixable errors.
 
 
 ## Whale it, you'll nail it!
@@ -23,7 +33,7 @@ $ docker-compose up
 [daviddm-dev-url]: https://david-dm.org/Eskalol/generator-swagger-test?type=dev
 [daviddm-dev-image]: https://img.shields.io/david/dev/Eskalol/generator-swagger-test.svg?style=flat-square
 
-[appveyor-image]: https://img.shields.io/appveyor/ci/Eskalol/generator-swagger-test.svg?style=flat-square
+[appveyor-image]: https://img.shields.io/appveyor/ci/Eskalol/generator-swagger-test.svg?style=flat-square&logo=appveyor
 [appveyor-url]: https://ci.appveyor.com/project/Eskalol/generator-swagger-test
 
 

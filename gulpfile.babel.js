@@ -31,6 +31,7 @@ function onServerLog(log) {
 /**
  * Serve
  */
+
 gulp.task('serve:dist', cb => {
   runSequence(
     'build',
@@ -49,6 +50,7 @@ gulp.task('serve', cb => {
 /**
  * Swagger
  */
+
 gulp.task('swagger', () => {
   return spawn('./node_modules/.bin/swagger-editor-live',
     ['src/api/swagger/swagger.yaml',
@@ -58,8 +60,9 @@ gulp.task('swagger', () => {
 });
 
 /**
-* Start servers
-*/
+ * Start servers
+ */
+
 gulp.task('start:dev', () => {
     nodemon(`-w ${paths.src} ${paths.src}`)
       .on('log', onServerLog);
@@ -73,6 +76,7 @@ gulp.task('start:prod', () => {
 /**
  * Env
  */
+
 gulp.task('env:dev', () => {
   env({
     vars: { NODE_ENV: 'development' }
@@ -116,6 +120,7 @@ gulp.task('lint:fix', () => {
 /**
  * Testing
  */
+
 gulp.task('test', cb => {
   runSequence(
     'env:test',
@@ -159,6 +164,7 @@ gulp.task('coverage:report', () => {
 gulp.task('coverage:codecov', () => {
   return spawn('./node_modules/.bin/codecov');
 });
+
 /**
  * Build
  */
@@ -191,6 +197,10 @@ gulp.task('copy:yaml', () => {
 });
 
 gulp.task('clean:dist', () => del([`${paths.dist}/!(.git*|.openshift|Procfile)**`], {dot: true}));
+
+/**
+ * Default
+ */
 
 gulp.task('default', cb => {
   runSequence(
