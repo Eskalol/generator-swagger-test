@@ -1,16 +1,37 @@
-import server, { init } from './app';
+import config from '../config/environment';
+import User from '../models/user';
+import { isAuthenticated } from './auth.service';
+import mongoose from 'mongoose';
 
-// Set default node environment to development
-const env = process.env.NODE_ENV || 'development';
-process.env.NODE_ENV = env;
+require('./local/passport').setup(User, config);
 
-if (env === 'development' || env === 'test') {
-  process.env.NODE_CONFIG_DIR = 'src/config';
-  console.log(`Environment is set to: ${env}`); // eslint-disable-line no-console
-} else {
-  process.env.NODE_CONFIG_DIR = 'dist/config';
+/**
+ * @brief json web token middleware for swagger.
+ * @details this middleware is called by swagger-express-mw.
+ *  See swagger.yaml for security definition.
+ *
+ * @param req request object
+ * @param res response object
+ * @param next next middleware
+ * @return returns null
+ */
+export function jwt(req, res, next) {
+  if (!req.headers.authorization) {
+    res.status(401).end();
+    return null;
+  }
+  isAuthenticated(req, res)
+    .then(user => user.hasAccess(req.swagger.operation['x-security-scope']))
+    .then((user) => {
+      next();
+      return null;
+    })
+    .catch((err) => {
+      if (err instanceof mongoose.Error.CastError) {
+        res.status(500).end();
+      } else {
+        res.status(err.error).json({ message: err.message });
+      }
+      return null;
+    });
 }
-
-init();
-
-export default server;
