@@ -126,9 +126,9 @@ gulp.task('test', cb => {
 gulp.task('mocha', () => {
   return spawn('./node_modules/.bin/nyc',
     ['./node_modules/.bin/mocha',
-    'src/test/**/*.js',
+    `${paths.test}`,
     '--compilers',
-    'js:babel-core/register',
+    'js:babel-register',
     '-R',
     'spec',
     '--timeout',
@@ -191,3 +191,12 @@ gulp.task('copy:yaml', () => {
 });
 
 gulp.task('clean:dist', () => del([`${paths.dist}/!(.git*|.openshift|Procfile)**`], {dot: true}));
+
+gulp.task('default', cb => {
+  runSequence(
+    [
+      'serve',
+      'swagger'
+    ],
+    cb)
+});

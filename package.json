@@ -66,16 +66,13 @@
   },
   "scripts": {
     "start": "npm run build && node dist/index.js",
-    "dev": "babel-watch src",
-    "swagger": "export swagger_swagger_fileName='src/api/swagger/swagger.yaml' && swagger project edit",
-    "swagger-win": "set swagger_swagger_fileName=src/api/swagger/swagger.yaml&& swagger project edit",
-    "build": "babel src -d dist --copy-files",
-    "watch": "babel -w src/index.js -d dist -s",
-    "babel-version": "babel --version",
-    "lint": "eslint src/api/ src/config/ src/models/ src/app.js src/index.js src/auth",
-    "lint:fix": "eslint --fix src/api/ src/config/ src/models/ src/app.js src/index.js src/auth",
-    "test": "NODE_ENV=test ./node_modules/.bin/nyc ./node_modules/.bin/mocha src/test/**/*.js --compilers js:babel-core/register -R spec --timeout 5000",
-    "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "serve": "gulp serve",
+    "swagger": "gulp swagger",
+    "build": "gulp build",
+    "lint": "gulp lint",
+    "lint:fix": "gulp lint:fix",
+    "test": "gulp test",
+    "coverage": "gulp coverage"
   },
   "repository": {
     "type": "git",
