@@ -26,12 +26,10 @@ const all = {
 
   mongo: {
     options: {
-      db: {
-        safe: true,
-      },
+      // mongodb options: see http://mongodb.github.io/node-mongodb-native/2.2/api/MongoClient.html
     },
   },
-  
+
   // Set secret in environment for production!
   secrets: {
     session: process.env.SECRET_SESSION || 'random-secret',
