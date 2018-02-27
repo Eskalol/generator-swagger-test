@@ -67,6 +67,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eskalol/generator-swagger-test"
+    "url": "git+https://github.com/Eskalol/generator-swagger-test.git"
   }
 }

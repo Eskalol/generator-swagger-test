@@ -5,7 +5,7 @@
 ## Development setup
 ```bash
 $ npm install -g gulp
-$ git clone https://github.com/Eskalol/generator-swagger-test
+$ git clone https://github.com/Eskalol/generator-swagger-test.git
 $ mongod
 $ gulp
 ```
@@ -28,17 +28,17 @@ $ docker-compose up
 ```
 
 
-[daviddm-image]: http://img.shields.io/david/.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/
-[daviddm-dev-url]: https://david-dm.org/?type=dev
-[daviddm-dev-image]: https://img.shields.io/david/dev/.svg?style=flat-square
+[daviddm-image]: http://img.shields.io/david/Eskalol/generator-swagger-test.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/Eskalol/generator-swagger-test
+[daviddm-dev-url]: https://david-dm.org/Eskalol/generator-swagger-test?type=dev
+[daviddm-dev-image]: https://img.shields.io/david/dev/Eskalol/generator-swagger-test.svg?style=flat-square
 
-[appveyor-image]: https://img.shields.io/appveyor/ci/.svg?style=flat-square&logo=appveyor
-[appveyor-url]: https://ci.appveyor.com/project/
+[appveyor-image]: https://img.shields.io/appveyor/ci/Eskalol/generator-swagger-test.svg?style=flat-square&logo=appveyor
+[appveyor-url]: https://ci.appveyor.com/project/Eskalol/generator-swagger-test
 
 
-[travis-image]: https://img.shields.io/travis/.svg?style=flat-square
-[travis-url]: https://travis-ci.org/
-[codecov-url]: https://codecov.io/gh/
-[codecov-image]: https://img.shields.io/codecov/c/github/.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/Eskalol/generator-swagger-test.svg?style=flat-square
+[travis-url]: https://travis-ci.org/Eskalol/generator-swagger-test
+[codecov-url]: https://codecov.io/gh/Eskalol/generator-swagger-test
+[codecov-image]: https://img.shields.io/codecov/c/github/Eskalol/generator-swagger-test.svg?style=flat-square
 
